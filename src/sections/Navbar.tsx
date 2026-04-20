@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logoImage from "@/assets/images/logo.svg";
-import Button from "@/components/button";
+import Button from "@/components/Button";
 import { Libre_Baskerville } from "next/font/google";
 
 const navLinks = [
