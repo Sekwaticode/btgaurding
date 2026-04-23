@@ -9,6 +9,7 @@ import twiceLogo from "@/assets/images/twice.svg";
 import Image from "next/image";
 
 const logos = [
+    
     { name: "Quantum", image: quantumLogo },
     { name: "Acme Corp", image: acmeLogo },
     { name: "Echo Valley", image: echoValleyLogo },
