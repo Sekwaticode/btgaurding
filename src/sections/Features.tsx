@@ -20,18 +20,20 @@ const features = [
 
 export default function Features() {
     return (
-        <section className="py-24">
+        <section className="py-16 md:py-20 lg:py-24">
             <div className="container">
                 <div className="flex justify-center">
                     <Tag>Features</Tag>
                 </div>
 
-                <h2 className="text-6xl font-medium text-center mt-6 max-w-2xl mx-auto">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium text-center mt-6 max-w-2xl mx-auto">
                     Where power meets{" "}
                     <span className="text-lime-400">simplicity</span>
                 </h2>
 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    {/* CARD 1 */}
                     <FeatureCard
                         title="Real Time collaboration"
                         description="Work together seamlessly with conflict-free team editing"
@@ -39,48 +41,34 @@ export default function Features() {
                     >
                         <div className="aspect-video flex items-center justify-center">
                             <Avatar className="z-40">
-                                <Image
-                                    src={avatar1}
-                                    alt="Avatar1"
-                                    className="rounded-full"
-                                />
+                                <Image src={avatar1} alt="Avatar1" className="rounded-full" />
                             </Avatar>
                             <Avatar className="-ml-6 border-indigo-500 z-30">
-                                <Image
-                                    src={avatar2}
-                                    alt="Avatar2"
-                                    className="rounded-full"
-                                />
+                                <Image src={avatar2} alt="Avatar2" className="rounded-full" />
                             </Avatar>
                             <Avatar className="-ml-6 border-amber-500 z-20">
-                                <Image
-                                    src={avatar3}
-                                    alt="Avatar3"
-                                    className="rounded-full"
-                                />
+                                <Image src={avatar3} alt="Avatar3" className="rounded-full" />
                             </Avatar>
                             <Avatar className="-ml-6 border-transparent group-hover:border-green-500 transition">
-                                <div className="size-full bg-neutral-700 rounded-full inline-flex items-center justify-center  relative">
+                                <div className="size-full bg-neutral-700 rounded-full inline-flex items-center justify-center relative">
                                     <Image
                                         src={avatar4}
                                         alt="Avatar 4"
                                         className="absolute size-full rounded-full opacity-0 group-hover:opacity-100 transition"
-                                    ></Image>
+                                    />
                                     {Array.from({ length: 3 }).map((_, i) => (
-                                        <span
-                                            className="size-1.5 rounded-full bg-white inline-flex"
-                                            key={i}
-                                        ></span>
+                                        <span key={i} className="size-1.5 rounded-full bg-white inline-flex"></span>
                                     ))}
                                 </div>
                             </Avatar>
                         </div>
                     </FeatureCard>
 
+                    {/* CARD 2 */}
                     <FeatureCard
                         title="Interactive Prototyping"
                         description="Engage your clients with prototypes that react to user activity"
-                        className="lg:col-span-1 group"
+                        className="group"
                     >
                         <div className="aspect-video flex items-center justify-center">
                             <p className="text-4xl font-extrabold text-white/20 group-hover:text-white/10 transition duration-500 text-center">
@@ -93,7 +81,7 @@ export default function Features() {
                                         loop
                                         muted
                                         playsInline
-                                        className="absolute bottom-full left-1/2 -translate-x-1/2 rounded-2xl shadow-xl  opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none"
+                                        className="absolute bottom-full left-1/2 -translate-x-1/2 rounded-2xl shadow-xl opacity-0 group-hover:opacity-100 transition duration-500 pointer-events-none"
                                     />
                                 </span>{" "}
                                 growth this year
@@ -101,23 +89,24 @@ export default function Features() {
                         </div>
                     </FeatureCard>
 
+                    {/* CARD 3 ✅ FIXED */}
                     <FeatureCard
                         title="Keyboard quick actions"
                         description="Powerful commands to help you create more designs quickly"
-                        className="md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-auto group"
+                        className="group lg:col-span-1"
                     >
                         <div className="aspect-video flex items-center justify-center gap-4">
-                          <Key className="w-28 outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-500 group-hover:translate-y-1">
-    shift
-</Key>
+                            <Key className="w-28 outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-500 group-hover:translate-y-1">
+                                shift
+                            </Key>
 
-<Key className="outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-500 group-hover:translate-y-1 delay-150">
-    alt
-</Key>
+                            <Key className="outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-500 group-hover:translate-y-1 delay-150">
+                                alt
+                            </Key>
 
-<Key className="outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-500 group-hover:translate-y-1 delay-300">
-    C
-</Key>
+                            <Key className="outline outline-2 outline-offset-4 outline-transparent group-hover:outline-lime-400 transition-all duration-500 group-hover:translate-y-1 delay-300">
+                                C
+                            </Key>
                         </div>
                     </FeatureCard>
                 </div>
